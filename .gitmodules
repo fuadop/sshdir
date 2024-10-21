@@ -1,0 +1,3 @@
+[submodule "sshconfig"]
+	path = sshconfig
+	url = https://github.com/fuadop/sshconfig

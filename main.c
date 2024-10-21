@@ -44,7 +44,7 @@ int main() {
 		char *msg = malloc(sizeof(char) * (strlen(host) + strlen(user) + strlen(hostname) + 1));
 		memset(msg, 0, sizeof(char) * (strlen(host) + strlen(user) + strlen(hostname) + 1));
 
-		sprintf(msg, "%-40s: %s@%s\n", host, user, hostname);
+		sprintf(msg, ": %-40s: %s@%s\n", host, user, hostname);
 		write(fd[1], msg, strlen(msg) + 1);
 
 		free(msg);
@@ -66,7 +66,7 @@ int main() {
 		"--delimiter",
 		":",
 		"--bind",
-		"enter:become(ssh {1})",
+		"enter:become(ssh {2})",
 		NULL
 	};
 
